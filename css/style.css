@@ -1,0 +1,32 @@
+body {
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+}
+
+header {
+  background: linear-gradient(135deg, #004f2d 60%, #aacd6e 100%);
+}
+
+header .btn {
+  color: #004f2d;
+  border-radius: 2rem;
+}
+
+h1, h2 {
+  font-weight: 700;
+}
+
+footer {
+  font-size: 0.95em;
+}
+
+img {
+  max-height: 350px;
+  object-fit: cover;
+}
+.custom-thankyou {
+    font-size: 1.25rem;
+    background: linear-gradient(90deg, #d4fc79 0%, #96e6a1 100%);
+    color: #1b4332;
+    border: 2px solid #95d5b2;
+    border-radius: 1rem;
+}
