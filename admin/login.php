@@ -75,6 +75,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <div class="mb-3">
                         <label for="password" class="form-label">Password</label>
                         <input type="password" class="form-control" name="password" id="password" required />
+                        <div class="form-check mt-2">
+                            <input type="checkbox" class="form-check-input" id="showPassword">
+                            <label class="form-check-label" for="showPassword">Show Password</label>
+                        </div>
                     </div>
                     <button type="submit" class="btn btn-primary w-100">Login</button>
                 </form>
@@ -84,5 +88,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div>
         </div>
     </div>
+    <script>
+    document.getElementById('showPassword').addEventListener('change', function() {
+        var pwd = document.getElementById('password');
+        pwd.type = this.checked ? 'text' : 'password';
+    });
+    </script>
 </body>
 </html>
