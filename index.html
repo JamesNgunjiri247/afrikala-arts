@@ -4,16 +4,277 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Afrikala Arts | Creating to Aspire and Inspire</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link href="css/style.css" rel="stylesheet" />
+    <!-- Favicon -->
+    <link rel="icon" href="assets/Afrikala Art Branding Colours & Fonts-02.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/Afrikala Art Branding Colours & Fonts-02.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/Afrikala Art Branding Colours & Fonts-02.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/Afrikala Art Branding Colours & Fonts-02.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap" rel="stylesheet">
+    
+    <style>
+      body {
+        font-family: 'Quicksand', Arial, sans-serif;
+        background: #fafbfa;
+        margin: 0;
+        padding: 0;
+      }
+      .navbar {
+        background: #f5f7f6;
+        border-bottom: none;
+        box-shadow: none;
+      }
+      .navbar-brand {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        height: 72px;
+      }
+      .navbar-brand img {
+        height: 56px;
+        width: auto;
+        display: block;
+        /* You can adjust this for even larger if you want */
+        transition: height 0.2s;
+      }
+      @media (max-width: 700px) {
+        .navbar-brand img {
+          height: 40px;
+        }
+        .navbar-brand {
+          height: 54px;
+        }
+      }
+      .navbar-nav .nav-link {
+        color: #222 !important;
+        font-size: 1rem;
+        margin-left: 16px;
+        letter-spacing: .01em;
+        font-weight: 500;
+      }
+      .navbar-nav .nav-link:hover,
+      .navbar-nav .nav-link:focus {
+        color: #14613a !important;
+        text-decoration: underline;
+        background: none;
+      }
+      .hero-gradient {
+        background: linear-gradient(110deg, #075b37 60%, #bada7c 100%);
+        color: #fff;
+        padding: 68px 0 40px 0;
+        text-align: center;
+      }
+      .hero-logo {
+        width: 82px;
+        height: auto;
+        margin-bottom: 18px;
+        margin-top: 2px;
+      }
+      .hero-gradient h1 {
+        font-size: 3rem;
+        font-weight: 400;
+        letter-spacing: .02em;
+        margin-bottom: 18px;
+        font-family: 'Quicksand', Arial, sans-serif;
+      }
+      .hero-gradient p {
+        font-size: 1.18rem;
+        font-weight: 400;
+        letter-spacing: .01em;
+        margin-bottom: 32px;
+      }
+      .btn-theme, .btn-light.btn-lg.fw-bold {
+        background: #fff !important;
+        color: #075b37 !important;
+        font-weight: bold;
+        border-radius: 2em;
+        padding: 12px 36px;
+        border: 2px solid #fff;
+        font-size: 1.18rem;
+        box-shadow: 0 2px 8px rgba(7,91,55,0.09);
+        transition: background 0.18s,color 0.18s;
+      }
+      .btn-theme:hover, .btn-light.btn-lg.fw-bold:hover {
+        background: #14613a !important;
+        color: #fff !important;
+        border-color: #fff !important;
+      }
+      .about-section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: start;
+        gap: 60px;
+        margin: 64px auto 0 auto;
+        max-width: 1000px;
+        padding: 0 20px;
+      }
+      .about-text {
+        flex: 1 1 300px;
+        min-width: 300px;
+        max-width: 440px;
+        margin-top: 32px;
+      }
+      .about-text h2 {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 14px;
+        color: #232323;
+      }
+      .about-text p {
+        color: #333;
+        font-size: 1.13rem;
+        line-height: 1.6;
+      }
+      .about-img {
+        flex: 1 1 240px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        margin-bottom: 24px;
+      }
+      .about-img img {
+        width: 280px;
+        max-width: 100%;
+        border-radius: 1.1em;
+        box-shadow: 0 2px 28px rgba(7,91,55,0.11);
+        object-fit: cover;
+        background: #f5f8f6;
+      }
+      .social-section {
+        margin: 58px 0 0 0;
+        text-align: center;
+      }
+      .social-section h5 {
+        color: #232323;
+        font-weight: 600;
+        font-size: 1.14rem;
+        margin-bottom: 20px;
+      }
+      .social-icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 32px;
+        flex-wrap: wrap;
+        margin-bottom: 0;
+      }
+      .social-icons a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: #fff;
+        color: #075b37;
+        font-size: 2.2rem;
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        border: 4px solid #bada7c;
+        transition: background 0.15s, color 0.15s, border 0.18s, transform 0.15s;
+        box-shadow: 0 2px 12px rgba(7,91,55,0.07);
+      }
+      .social-icons a:hover {
+        background: #bada7c;
+        color: #075b37;
+        border: 4px solid #075b37;
+        text-decoration: none;
+        transform: translateY(-4px) scale(1.07);
+      }
+      footer {
+        background: #f6f8f7;
+        color: #232323;
+        font-size: 0.97rem;
+        padding: 18px 0;
+        margin-top: 60px;
+        border-top: 1.5px solid #e2e8e6;
+        text-align: center;
+        letter-spacing: .01em;
+      }
+      @media (max-width: 900px) {
+        .about-section {
+          flex-direction: column-reverse;
+          align-items: center;
+          gap: 32px;
+        }
+        .about-img img {
+          width: 220px;
+        }
+      }
+      @media (max-width: 700px) {
+        .navbar-brand img {
+          height: 40px;
+        }
+        .navbar-brand {
+          height: 54px;
+        }
+        .hero-gradient h1 {
+          font-size: 2rem;
+        }
+        .social-icons {
+          gap: 18px;
+        }
+        .social-icons a {
+          width: 58px;
+          height: 58px;
+          font-size: 1.4rem;
+          border-width: 3px;
+        }
+        .about-img img {
+          width: 140px;
+        }
+        .about-section {
+          gap: 12px;
+        }
+        .hero-logo {
+          width: 60px;
+        }
+      }
+      @media (max-width: 500px) {
+        .navbar-brand img {
+          height: 32px;
+        }
+        .navbar-brand {
+          height: 38px;
+        }
+        .hero-gradient h1 {
+          font-size: 1.35rem;
+        }
+        .hero-gradient p {
+          font-size: 1rem;
+        }
+        .about-section {
+          gap: 8px;
+        }
+        .about-img img {
+          width: 94vw;
+          max-width: 170px;
+        }
+        .btn-theme, .btn-light.btn-lg.fw-bold {
+          padding: 9px 12px;
+          font-size: 1rem;
+        }
+        .social-section h5 {
+          font-size: 1rem;
+        }
+        .hero-logo {
+          width: 46px;
+        }
+      }
+      /* Make the hero logo larger */
+      .hero-logo {
+        width: 140px;
+        max-width: 36vw;
+      }
+    </style>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container">
-        <a class="navbar-brand fw-bold" href="#">Afrikala Arts</a>
+        <a class="navbar-brand fw-bold" href="#">
+          <img src="assets/Afrikala Art Branding Colours & Fonts-02.svg" alt="Afrikala Arts Logo" />
+        </a>
         <button
           class="navbar-toggler"
           type="button"
@@ -38,46 +299,44 @@
       </div>
     </nav>
 
-    <header class="py-5 text-center bg-primary text-white">
+    <section class="hero-gradient">
       <div class="container">
-        <h1 class="display-4">Creating to Aspire and Inspire</h1>
-        <p class="lead mb-4">
-          A Holistic Creative Agency championing Art & Mental Health among
-          children, youth & creatives.
+        <img src="assets/Afrikala Art Branding Colours & Fonts-02.svg" alt="Afrikala Arts Logo" class="hero-logo"/>
+        <h1>Creating to Aspire and Inspire</h1>
+        <p>
+          A Holistic Creative Agency championing Art &amp; Mental Health among children, youth &amp; creatives.
         </p>
-        <a href="register.html" class="btn btn-light btn-lg fw-bold"
-          >Register for an Event</a
-        >
-      </div>
-    </header>
-
-    <section class="py-5" id="about">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-md-6 mb-4 mb-md-0">
-            <h2>About Afrikala Arts</h2>
-            <p>
-              Afrikala Arts is a youth organization dedicated to nurturing
-              creativity, well-being, and community among young people and
-              creatives. Through our programs and events, we provide a platform
-              for artistic expression and mental health advocacy.
-            </p>
-          </div>
-          <div class="col-md-6">
-            <img
-              src="assets/WhatsApp Image 2025-06-09 at 18.27.43_419dd6d6.jpg"
-              alt="Afrikala Arts"
-              class="img-fluid rounded shadow"
-            />
-          </div>
-        </div>
+        <a href="register.html" class="btn btn-theme btn-lg fw-bold">
+          Register for an Event
+        </a>
       </div>
     </section>
 
-    <footer class="bg-light py-4 mt-5">
-      <div class="container text-center">
-        <small>&copy; 2020 Afrikala Arts. All rights reserved.</small>
+    <section class="about-section" id="about">
+      <div class="about-text">
+        <h2>About Afrikala Arts</h2>
+        <p>
+          Afrikala Arts is a youth organization dedicated to nurturing creativity, well-being, and community among young people and creatives. Through our programs and events, we provide a platform for artistic expression and mental health advocacy.
+        </p>
       </div>
+      <div class="about-img">
+        <img src="assets/WhatsApp Image 2025-06-09 at 18.27.43_419dd6d6.jpg" alt="Afrikala Arts"/>
+      </div>
+    </section>
+
+    <!-- Social Media Section -->
+    <section class="social-section">
+      <h5>Connect with us on Social Media</h5>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/afrikala254" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/afrikala_art/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@afrikala" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        <a href="https://www.linkedin.com/company/afrikala-art/posts/?feedView=all" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </section>
+
+    <footer>
+      &copy; 2020 Afrikala Arts. All rights reserved.
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
