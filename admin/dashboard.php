@@ -7,13 +7,11 @@ if (!isset($_SESSION['admin_logged_in']) || $_SESSION['admin_logged_in'] !== tru
     exit;
 }
 
-// Database connection
 $host = "localhost";
 $user = "root";
 $password = "";
 $dbname = "afrikala_arts";
 $conn = new mysqli($host, $user, $password, $dbname);
-
 // Event options (customize or fetch from DB)
 $events = [
     "Nairobi County League Buruburu Girls",

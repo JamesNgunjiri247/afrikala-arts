@@ -10,7 +10,6 @@ $user = "root";
 $password = "";
 $dbname = "afrikala_arts";
 $conn = new mysqli($host, $user, $password, $dbname);
-
 // Check DB connection
 if ($conn->connect_error) {
     echo json_encode(['error' => 'Database connection failed.']);
